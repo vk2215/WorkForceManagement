@@ -1,39 +1,38 @@
-🚀 Workforce Management API: Backend Challenge
-Project Overview
-Welcome to my solution for the Backend Engineer Challenge! This project is a Workforce Management API, a core component of a logistics super-app. I've taken the provided codebase, fixed some reported bugs, and implemented several highly-requested new features.
+# Workforce Management API
 
-Bug Fixes 🐞
-1. Duplicate Tasks: Solved the issue where task reassignment created duplicates by ensuring the old task is marked as CANCELLED before a new one is created.
+Welcome to the **Workforce Management API**! This is a backend system designed to help managers assign, track, and manage tasks for employees. The system is built using **Spring Boot** with **Gradle** and handles features such as task assignment, prioritization, task history, and more.
 
-2. Cluttered Task View: The fetch-by-date endpoint no longer includes cancelled or completed tasks, giving employees a cleaner, more relevant list.
+---
 
-New Features ✨
-Smart Daily View: The fetch-by-date endpoint now returns a "smart" list that includes all active tasks for a given date range, plus any active tasks that are overdue.
+## 🚀 Project Setup
 
-Task Priorities: Tasks now have a Priority field (HIGH, MEDIUM, LOW), with new endpoints to update a task's priority and fetch tasks by priority.
+### Prerequisites
+    - Java 17
+    - Gradle 7.x or higher
+    - IDE (e.g., IntelliJ IDEA, VSCode)
 
-Activity History & Comments: Every task has a complete activity log, automatically tracking key events like status changes. Users can also add free-text comments. All of this is included when you fetch a single task's details.
+### 1. Clone the Repository
+    git clone https://github.com/yourusername/workforcemgmt.git
+    cd workforcemgmt
 
-Technical Stack 🛠️
-Language: Java 17
+### 2. Build the Project
+    ./gradlew build
+  
+### 3. Run the Application
+    ./gradlew bootRun
+  
+Visit: http://localhost:8080
 
-Framework: Spring Boot 3.0.4
+### Features Implemented
+    ✅ Bug Fixes
+    Duplicate Task on Reassignment: Old task is marked CANCELLED when reassigned.
+    Cancelled Tasks Hidden: Fetching tasks excludes those marked as CANCELLED.
 
-Build Tool: Gradle
+    ✅ New Features
+    Smart Daily Task View: Shows tasks starting in the range + still active tasks from earlier.
+    Task Priority: Add/change task priority (HIGH, MEDIUM, LOW).
+    Task Comments & Activity History: Tracks all events and allows free-text comments.
 
-Data Storage: In-memory collections (no database required)
-
-How to Run the Project 🏃
-Clone the repository:
-
-git clone https://github.com/vk2215/WorkForceManagement.git
-
-Navigate to the project folder:
-
-cd WorkForceManagement
-
-Start the application:
-
-./gradlew bootRun
-
-The API will be accessible at http://localhost:8080.
+### 💻 Running & Testing
+    Start the app and use Postman or Insomnia to interact with the API at:
+    http://localhost:8080
