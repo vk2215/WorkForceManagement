@@ -1,21 +1,39 @@
-🚀 Workforce Management API: Project Summary
-Welcome to my submission for the Backend Engineer Challenge! This project is a Workforce Management API built with Spring Boot and Java 17.
+🚀 Workforce Management API: Backend Challenge
+Project Overview
+Welcome to my solution for the Backend Engineer Challenge! This project is a Workforce Management API, a core component of a logistics super-app. I've taken the provided codebase, fixed some reported bugs, and implemented several highly-requested new features.
 
-🐞 Bugs Fixed
-Task Reassignment: When reassigning a task, the old task is now automatically marked as CANCELLED to avoid duplicates.
+Bug Fixes 🐞
+1. Duplicate Tasks: Solved the issue where task reassignment created duplicates by ensuring the old task is marked as CANCELLED before a new one is created.
 
-Cluttered Task List: The task-fetching endpoint now correctly filters out all CANCELLED and COMPLETED tasks.
+2. Cluttered Task View: The fetch-by-date endpoint no longer includes cancelled or completed tasks, giving employees a cleaner, more relevant list.
 
-✨ New Features Implemented
-Smart Daily View: The API now provides a "smart" task list that includes all active tasks for a given date, plus any overdue tasks.
+New Features ✨
+Smart Daily View: The fetch-by-date endpoint now returns a "smart" list that includes all active tasks for a given date range, plus any active tasks that are overdue.
 
-Task Priorities: I added a new Priority field (HIGH, MEDIUM, LOW) and new endpoints to update a task's priority and fetch tasks by priority.
+Task Priorities: Tasks now have a Priority field (HIGH, MEDIUM, LOW), with new endpoints to update a task's priority and fetch tasks by priority.
 
-Comments & History: Each task now has a full activity history and supports user comments, giving team leads a complete audit trail.
+Activity History & Comments: Every task has a complete activity log, automatically tracking key events like status changes. Users can also add free-text comments. All of this is included when you fetch a single task's details.
 
-⚙️ How to Run the Project
-Clone the repo: git clone https://github.com/vk2215/WorkForceManagement.git
+Technical Stack 🛠️
+Language: Java 17
 
-Run the app: ./gradlew bootRun
+Framework: Spring Boot 3.0.4
 
-The API will be live at http://localhost:8080.
+Build Tool: Gradle
+
+Data Storage: In-memory collections (no database required)
+
+How to Run the Project 🏃
+Clone the repository:
+
+git clone https://github.com/vk2215/WorkForceManagement.git
+
+Navigate to the project folder:
+
+cd WorkForceManagement
+
+Start the application:
+
+./gradlew bootRun
+
+The API will be accessible at http://localhost:8080.
