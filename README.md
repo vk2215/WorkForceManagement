@@ -7,7 +7,7 @@ Welcome to the **Workforce Management API**! This is a backend system designed t
 ## 🚀 Project Setup
 
 ### Prerequisites
-    - Java 17
+    - Java 23
     - Gradle 7.x or higher
     - IDE (e.g., IntelliJ IDEA, VSCode)
 
